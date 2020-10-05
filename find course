@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Undergrad Helper</title>    
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/course.js"></script>
+  <script src="src/view/findPath.js"></script>
+  <script>
+   window.addEventListener("load", pl.view.findPath.setupUserInterface);
+  </script>
+</head>
+<body style="overflow:scroll">
+ <header><h1>UnderGrad Helper: Find my career path</h1></header>
+
+  <section id="form" style="background-color:gray;box-sizing:borderbox;border:1 px solidblack" width="80%">
+  <form id="course" >
+    <p><label>preference: <input name="preference" /></label></p>
+    <p><label>interest:<input name="hobbies" /></label></p>
+    <p><label>results:</br>
+	<label>maths:<input name="subject"/></label>
+	<label>biology        :<input name="subject"/></label>
+	<label>chemistry      :<input name="subject"/></label>
+	<label>physics        :<input name="subject"/></label><br/><br/>
+	<label>english        :<input name="subject"/></label>
+	<label>setswana       :<input name="subject"/></label>
+	<label>Double-Science :<input name="subject"/></label>
+	<label>Single-Scince  :<input name="subject"/></label><br/><br/>
+	<label>Optionals      :<select name="optionals"/>
+	 <option>AddMaths</option>geography<option>social studies</option></select>
+	 <input name="subject" /></label><br/><br/>
+	 <label>practicals    :<select name="practicals"><option>Physical Education</option><option>Additional Mathematics</option>
+	 <option></option></select><input name="subject" /></label><br/><br/>
+	 <label>others        :<select name="others"> <option>Acoounting</option>Business Studies<option> Commerce</option>
+	 <option>ComputerStudies</option><option></option></select><input name="subject" /></label>
+	 </label>
+	</label></p>
+    <p><button type="button" name="commit">Search</button></p>
+  </form>
+  <form id="form2" method="POST" action="getSugg.php"> 
+  <input type="text"/>
+  <input type="text"/>
+  <input type="text"/>
+  </form>
+  </section>
+  <div>
+  <table id="RecommendedCourses">
+    <thead><tr><th>coursename</th><th>courseTitle</th><th>Duration</th><th>fieldOfStudy</th><th>School</th><th>EntryRequirements</th></th></tr></thead>
+    <tbody></tbody>
+  </table>
+  </div>
+  <nav><a href="index.html"> Main menu</a></nav>
+</body>
+</html>
